@@ -1,0 +1,66 @@
+﻿+-
+Q1
+Input Stream- 
+Input Stream is the abstract class in java it is used to read binary data
+Output Stream-
+Output Stream is the abstract class in java it is used to write binary data
+
+
+Q2
+1 write() - for writing in file
+2 flash() - to insert data from buffer to file
+3 close() - for closing the Stream
+
+
+Q3
+Serialization is the process of converting objects in the byte format and store in file
+
+
+Q4
+Serializable interface is a marker interface which did not have any method it is used to Indicate that the object of class is serializable 
+
+
+Q5
+Deserialization is totally opposite of serialization it is converting the object data from byte code to readable format
+
+
+Q6
+1 we need to implement the serializable interface to a class which object we want to do serialization
+2 then make object of ObjectOutputStrem 
+3 then make object of FileOutputSteam and give ObjectOutputStrem object as parameter
+4 then use method outputStream.writeObject(); for serialization
+
+
+Q7 
+1 use FileInputStream class to make object
+2the make ObjectInputSteam class with parameter of object of FileInputStreame
+3 then use .readObject method
+
+
+Q8
+use transient key word to a method or variable you dont want to be serializaed
+
+
+Q9
+1 File
+2 FileInputStream
+3 FileOutputStream
+4 BufferedReader
+5 BufferedWriter
+
+
+Q10
+Serializable Interface:
+
+
+Default serialization mechanism.
+Minimal coding required.
+Objects are serialized automatically.
+
+
+Externalizable Interface:
+
+
+Custom serialization mechanism.
+Requires implementation of writeExternal and readExternal methods.
+Provides control over what and how to serialize.
