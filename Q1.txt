@@ -1,0 +1,23 @@
+Q1
+Multithreading is the process of dividing process and executing them Individually Independent from each other 
+Multithreading allows to execute multiple part of program at a same time
+Q2
+It can use to reduce the time to execute a particular program
+Allows the program to run if any part of program is blocked
+Make better use of memory 
+Q3
+Thread is a part of process in a program which execute individually 
+Q4
+1-	By implementing the runnable interface 
+2-	By extending the thread class
+
+Q5
+-Process is part of program which cannot separate from the program
+-thread is part of process which executes separately 
+Q6
+For creating daemon thread in java we use the method named as setDaemon() 
+Q7
+-	wait() is used to make the thread waiting for complication of process
+-	sleep() is used to make the thread sleep for time in milliseconds  
+
+
