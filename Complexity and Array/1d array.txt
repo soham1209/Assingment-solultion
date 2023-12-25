@@ -1,0 +1,41 @@
+Q1
+Public static int sol(int[] arr){
+Int sum =0;
+For(int I =0;I<arr.length;i++){
+If(i%2==0){
+Sum+=arr[i];
+}
+}
+Return sum;
+}
+
+Q2
+public static void sol (int[] arr){
+For(int i: arr){
+If(i%2==0){
+System.out.println(i);
+}
+}
+}
+
+Q3
+public static int sol(int[] arr){
+Arrays.sort(arr);
+Int a = arr.length;
+Return arr[a-1];
+}
+
+Q4
+public static int sol(int[] arr){
+Arrays.sort(arr);
+Int a = arr.length;
+Return arr[a-2];
+}
+Q5
+Public static int sol(int [] arr){
+For(int I = 1; i<arr.length-1;i++){
+If(arr[I]>arr[i+1])&&arr[i]>arr[i-1])
+Return I;
+}
+Return -1;
+}

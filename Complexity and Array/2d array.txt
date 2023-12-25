@@ -1,0 +1,196 @@
+Q1
+import java.util.Scanner;
+
+public class NumberStatistics {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the value of m: ");
+        int m = scanner.nextInt();
+
+        System.out.print("Enter the value of n: ");
+        int n = scanner.nextInt();
+
+        int[][] matrix = new int[m][n];
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print("Enter element at position (" + i + ", " + j + "): ");
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+
+        int positiveCount = 0, negativeCount = 0, oddCount = 0, evenCount = 0, zeroCount = 0;
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                int currentNumber = matrix[i][j];
+
+                if (currentNumber > 0) {
+                    positiveCount++;
+                } else if (currentNumber < 0) {
+                    negativeCount++;
+                }
+
+                if (currentNumber % 2 == 0) {
+                    evenCount++;
+                } else {
+                    oddCount++;
+                }
+
+                if (currentNumber == 0) {
+                    zeroCount++;
+                }
+            }
+        }
+
+        System.out.println("Number of positive numbers: " + positiveCount);
+        System.out.println("Number of negative numbers: " + negativeCount);
+        System.out.println("Number of odd numbers: " + oddCount);
+        System.out.println("Number of even numbers: " + evenCount);
+        System.out.println("Number of zeros: " + zeroCount);
+
+        scanner.close();
+    }
+}
+
+
+Q2
+import java.util.Scanner;
+
+public class AboveSecondaryDiagonal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the size of the square matrix: ");
+        int size = scanner.nextInt();
+
+        int[][] matrix = new int[size][size];
+
+        System.out.println("Enter the elements of the square matrix:");
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                System.out.print("Enter element at position (" + i + ", " + j + "): ");
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+
+        System.out.println("Elements above the secondary diagonal:");
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (i + j < size - 1) {
+                    System.out.print(matrix[i][j] + " ");
+                }
+            }
+        }
+
+        scanner.close();
+    }
+}
+
+Q3 
+import java.util.Scanner;
+
+public class DiagonalsInSquareMatrix {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the size of the square matrix: ");
+        int size = scanner.nextInt();
+
+        int[][] matrix = new int[size][size];
+
+        System.out.println("Enter the elements of the square matrix:");
+
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                System.out.print("Enter element at position (" + i + ", " + j + "): ");
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+
+        System.out.println("Elements of the main diagonal:");
+
+        for (int i = 0; i < size; i++) {
+            System.out.print(matrix[i][i] + " ");
+        }
+
+        System.out.println(); // Move to the next line
+
+        System.out.println("Elements of the secondary diagonal:");
+
+        for (int i = 0; i < size; i++) {
+            System.out.print(matrix[i][size - i - 1] + " ");
+        }
+
+        scanner.close();
+    }
+}
+
+Q4
+import java.util.Scanner;
+
+public class LargestElementIn2DArray {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of rows: ");
+        int rows = scanner.nextInt();
+
+        System.out.print("Enter the number of columns: ");
+        int cols = scanner.nextInt();
+
+        // Taking input for the 2D array
+        int[][] matrix = new int[rows][cols];
+
+        System.out.println("Enter the elements of the 2D array:");
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                System.out.print("Enter element at position (" + i + ", " + j + "): ");
+                matrix[i][j] = scanner.nextInt();
+            }
+        }
+        int largestElement = matrix[0][0];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (matrix[i][j] > largestElement) {
+                    largestElement = matrix[i][j];
+                }
+            }
+        }
+        System.out.println("The largest element in the 2D array is: " + largestElement);
+
+        scanner.close();
+    }
+}
+
+Q5
+public class MiddleRowColumn {
+
+    public static void displayMiddleRowAndColumn(int[][] matrix, int size) {
+        System.out.println("Elements of the middle row:");
+
+        int middleRow = size / 2;
+        for (int j = 0; j < size; j++) {
+            System.out.print(matrix[middleRow][j] + " ");
+        }
+
+        System.out.println(); // Move to the next line
+
+        System.out.println("Elements of the middle column:");
+
+        int middleColumn = size / 2;
+        for (int i = 0; i < size; i++) {
+            System.out.print(matrix[i][middleColumn] + " ");
+        }
+    }
+
+
+
+
+
+
